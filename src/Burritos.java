@@ -16,12 +16,12 @@ public class Burritos
         String[] Queso = {"Yes", "No"};
         String[] SourCream = {"Yes", "No"};
 
-        // 2-D array to store ingredients for burrito
+        
         int[][] Burritos = new int[25][9];
-        // Array to store price for Burritos
+        
         double[] Price = new double[25];
 
-        // Initialize the Burritos array
+        
         for(int row=0;row<25;row++)
         {
             Burritos[row][0] = 2;
@@ -35,17 +35,16 @@ public class Burritos
             Burritos[row][8] = 1;
         }
 
-        // Initialize price array
+        
         for(int row=0;row<25;row++)
             Price[row]=0.00;
 
-        // Loop for all 25 burritos
+        
         int ingd_cntr = 0;
         double price = 3.00;
         for(int burr_cntr=0; burr_cntr<25; burr_cntr++)
         {
-            // random number generator for number of ingredients for the burrito
-            // between 5 to 9
+            // random number generator
             int total_ingd = rand.nextInt(5)+5;
             // Initializing a counter for ingredients
             ingd_cntr = 0;
