@@ -5,7 +5,7 @@ public class Burritos
     public static void main(String[] args)
     {
         Random rand = new Random();
-
+        //Get INGREDIENTS
         String[] Rice = {"White", "Brown", "None", "All"};
         String[] Meat = {"Chicken", "Steak", "Carnidas", "Chorizo", "Sofritas", "Veggie", "None", "All"};
         String[] Beans = {"Pinto", "Black", "None", "All"};
@@ -16,12 +16,12 @@ public class Burritos
         String[] Queso = {"Yes", "No"};
         String[] SourCream = {"Yes", "No"};
 
-        
+        //SAVE INGREDIENTS FOR BURRITOS
         int[][] Burritos = new int[25][9];
-        
+        //SAVE PRICE FOR BURRITOS
         double[] Price = new double[25];
 
-        
+        //BURRITOS ARRAY
         for(int row=0;row<25;row++)
         {
             Burritos[row][0] = 2;
@@ -35,11 +35,11 @@ public class Burritos
             Burritos[row][8] = 1;
         }
 
-        
+        //PRICE
         for(int row=0;row<25;row++)
             Price[row]=0.00;
 
-        
+        //lOOP FOR ALL BURRITOS
         int ingd_cntr = 0;
         double price = 3.00;
         for(int burr_cntr=0; burr_cntr<25; burr_cntr++)
@@ -135,7 +135,7 @@ public class Burritos
         }
 
         int tmp_indx=0;
-        //Displaying the customized Burritos
+        //PRINT ALL 25 BURRITOS
         for(int burr_cntr=0; burr_cntr<25; burr_cntr++)
         {
             System.out.println("Burrito #" + (burr_cntr+1) + " (Price: $" + Price[burr_cntr] + ")");
